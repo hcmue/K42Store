@@ -5,57 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="obj\Debug\netcoreapp2.1\K42Store.AssemblyInfo.cs" />
-    <Compile Include="obj\Debug\netcoreapp2.1\K42Store.RazorAssemblyInfo.cs" />
-    <Compile Include="obj\Debug\netcoreapp2.1\K42Store.RazorTargetAssemblyInfo.cs" />
-    <Compile Include="obj\Debug\netcoreapp2.1\Razor\Views\HangHoa\Index.g.cshtml.cs" />
-    <Compile Include="obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs" />
-    <Compile Include="obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs" />
-    <Compile Include="obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs" />
-    <Compile Include="obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs" />
-    <Compile Include="obj\Debug\netcoreapp2.1\Razor\Views\QLLoai\Create.g.cshtml.cs" />
-    <Compile Include="obj\Debug\netcoreapp2.1\Razor\Views\QLLoai\Delete.g.cshtml.cs" />
-    <Compile Include="obj\Debug\netcoreapp2.1\Razor\Views\QLLoai\Details.g.cshtml.cs" />
-    <Compile Include="obj\Debug\netcoreapp2.1\Razor\Views\QLLoai\Edit.g.cshtml.cs" />
-    <Compile Include="obj\Debug\netcoreapp2.1\Razor\Views\QLLoai\Index.g.cshtml.cs" />
-    <Compile Include="obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs" />
-    <Compile Include="obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs" />
-    <Compile Include="obj\Debug\netcoreapp2.1\Razor\Views\Shared\_FrontEnd.g.cshtml.cs" />
-    <Compile Include="obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs" />
-    <Compile Include="obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs" />
-    <Compile Include="obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs" />
-    <Compile Include="obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs" />
-    <Compile Include="obj\Debug\netcoreapp2.1\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\netcoreapp2.1\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\netcoreapp2.1\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
-    <Compile Include="obj\Release\netcoreapp2.1\K42Store.AssemblyInfo.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="obj\Debug\netcoreapp2.1\K42Store.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\project.assets.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="obj\Debug\netcoreapp2.1\K42Store.AssemblyInfoInputs.cache" />
-    <None Include="obj\Debug\netcoreapp2.1\K42Store.assets.cache" />
-    <None Include="obj\Debug\netcoreapp2.1\K42Store.csproj.CopyComplete" />
-    <None Include="obj\Debug\netcoreapp2.1\K42Store.csproj.CoreCompileInputs.cache" />
-    <None Include="obj\Debug\netcoreapp2.1\K42Store.csprojAssemblyReference.cache" />
-    <None Include="obj\Debug\netcoreapp2.1\K42Store.dll" />
-    <None Include="obj\Debug\netcoreapp2.1\K42Store.pdb" />
-    <None Include="obj\Debug\netcoreapp2.1\K42Store.RazorAssemblyInfo.cache" />
-    <None Include="obj\Debug\netcoreapp2.1\K42Store.RazorCoreGenerate.cache" />
-    <None Include="obj\Debug\netcoreapp2.1\K42Store.RazorTargetAssemblyInfo.cache" />
-    <None Include="obj\Debug\netcoreapp2.1\K42Store.TagHelpers.input.cache" />
-    <None Include="obj\Debug\netcoreapp2.1\K42Store.TagHelpers.output.cache" />
-    <None Include="obj\Debug\netcoreapp2.1\K42Store.Views.dll" />
-    <None Include="obj\Debug\netcoreapp2.1\K42Store.Views.pdb" />
-    <None Include="obj\K42Store.csproj.nuget.cache" />
-    <None Include="obj\K42Store.csproj.nuget.g.props" />
-    <None Include="obj\K42Store.csproj.nuget.g.targets" />
-    <None Include="obj\Release\netcoreapp2.1\K42Store.AssemblyInfoInputs.cache" />
-    <None Include="obj\Release\netcoreapp2.1\K42Store.csproj.CoreCompileInputs.cache" />
     <None Include="Views\Home\About.cshtml" />
     <None Include="Views\Home\Contact.cshtml" />
     <None Include="Views\Home\Index.cshtml" />
@@ -96,6 +45,8 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.4" />
   </ItemGroup>
 
 </Project>

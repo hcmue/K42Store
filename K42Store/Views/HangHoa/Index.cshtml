@@ -2,7 +2,11 @@
 @{
     ViewData["Title"] = "Index";
 }
-
+<style>
+    .snipcart-thumb img {
+        width: 85%;
+    }
+</style>
 <div class="agile_top_brands_grids">
     @foreach (var item in Model)
     {
@@ -16,7 +20,8 @@
                         <figure>
                             <div class="snipcart-item block">
                                 <div class="snipcart-thumb">
-                                    <a href="single.html">
+                                    <a asp-action="ChiTiet" 
+ asp-controller="HangHoa" asp-route-id="@item.MaHh">
                                         <img src="~/Hinh/HangHoa/@item.Hinh">
                                     </a>
                                     <p>@item.TenHh</p>

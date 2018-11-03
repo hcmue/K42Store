@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using K42Store.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace K42Store.Controllers
 {
@@ -12,6 +13,8 @@ namespace K42Store.Controllers
     {
         public IActionResult Index()
         {
+            //Tạo session
+            HttpContext.Session.SetString("HoTen", "Nguyễn Văn Tèo");
             return View();
         }
 

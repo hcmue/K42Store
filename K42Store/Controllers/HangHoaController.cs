@@ -32,5 +32,20 @@ namespace K42Store.Controllers
                 DonGia = p.DonGia.Value, GiamGia = p.GiamGia
             }));
         }
+
+        public IActionResult ChiTiet(int? id)
+        {
+            if (!id.HasValue)
+            {
+                return RedirectToAction("Index", "HangHoa");
+            }
+
+            HangHoa hh = db.HangHoa.SingleOrDefault(p => p.MaHh == id);
+            if (hh != null)
+            {
+                return View(hh);
+            }
+            return RedirectToAction("Index", "HangHoa");
+        }
     }
 }

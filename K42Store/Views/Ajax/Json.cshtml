@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "Json";
+}
+
+<h2>Json Search</h2>
+<input id="txtSearch" placeholder="Input here"/>
+<table>
+    <thead><tr><td>Tên</td><td>Giá</td></tr></thead>
+    <tbody id="results"></tbody>
+</table>
+<script>
+    $(function() {
+        $("#txtSearch").keyup(function() {
+            $.ajax({
+                url: "/Ajax/JsonSearch",
+                data: { keyword: $(this).val() },
+                success: function (res) {
+                    $("#results").html("");
+                    $(res).each(function(idx, item) {
+                        var tr = $("<tr/>");
+                        $("<td/>").html(item.tenHH).appendTo(tr);
+                        $("<td/>").html(item.giaBan).appendTo(tr);
+                        $("#results").append(tr);
+                    });
+                }
+            });
+        });
+    });
+</script>

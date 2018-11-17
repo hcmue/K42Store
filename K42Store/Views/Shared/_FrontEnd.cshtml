@@ -15,8 +15,25 @@
     <div class="agileits_header">
         <div class="container">
             <div class="w3l_offers">
-                <p>SALE UP TO 70% OFF. USE CODE "SALE70%" . <a href="products.html">SHOP NOW</a></p>
+                <p>
+                    <span id="dongHo"></span>
+                    SALE UP TO 70% OFF. USE CODE "SALE70%" . <a href="products.html">SHOP NOW</a>
+                </p>
             </div>
+            <script>
+                $(function () {
+                    setInterval(function () {
+                        $.ajax({
+                            url: "/Ajax/ServerTime",
+                            method: "GET",
+                            success: function(response) {
+                                $("#dongHo").html(response);
+                            }
+                        });
+                    }, 1000);
+
+                });
+            </script>
             <div class="agile-login">
                 <ul>
                     <li><a href="registered.html"> Create Account </a></li>
@@ -92,10 +109,12 @@
                                             }
                                             @foreach (var item in dsLoai)
                                             {
-                                                <li><a asp-action="Index" asp-route-id="@item.MaLoai" 
+                                                <li>
+                                                    <a asp-action="Index" asp-route-id="@item.MaLoai"
                                                        asp-controller="HangHoa">
-                                                    @item.TenLoai
-                                                </a></li>
+                                                        @item.TenLoai
+                                                    </a>
+                                                </li>
                                             }
                                         </ul>
                                     </div>

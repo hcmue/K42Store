@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Tìm kiếm</h2>
+<div>
+    <label>Tên hàng hóa</label>
+    <input id="txtSearch" placeholder="Nhập từ khóa"/>
+    <button type="button" id="btnSearch">Tìm</button>
+</div>
+<div id="results"></div>
+<script>
+    $(function() {
+        $("#btnSearch").click(function() {
+            $.ajax({
+                url: "/Ajax/Search",
+                data: { keyword: $("#txtSearch").val() },
+                success: function(response) {
+                    $("#results").html(response);
+                }
+            });
+        });
+    });
+</script>

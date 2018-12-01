@@ -26,7 +26,7 @@
                         $.ajax({
                             url: "/Ajax/ServerTime",
                             method: "GET",
-                            success: function(response) {
+                            success: function (response) {
                                 $("#dongHo").html(response);
                             }
                         });
@@ -36,8 +36,20 @@
             </script>
             <div class="agile-login">
                 <ul>
-                    <li><a href="registered.html"> Create Account </a></li>
-                    <li><a href="login.html">Login</a></li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li>
+                            <a asp-action="Profile" asp-controller="KhachHang">
+                                Xin chào @User.Identity.Name
+                            </a>
+                        </li>
+                        <li><a asp-action="Logout" asp-controller="KhachHang">Logout</a></li>
+                    }
+                    else
+                    {
+                        <li><a href="registered.html"> Create Account </a></li>
+                        <li><a asp-action="Login" asp-controller="KhachHang">Login</a></li>
+                    }
                     <li><a href="contact.html">Help</a></li>
 
                 </ul>
